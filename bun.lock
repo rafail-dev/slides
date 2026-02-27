@@ -25,9 +25,20 @@
         "vue": "^3.5.26",
       },
     },
+    "2026-02-28_slides-as-code-slides": {
+      "name": "2026-02-28_slides-as-code-slides",
+      "dependencies": {
+        "@slidev/cli": "^52.13.0",
+        "@slidev/theme-default": "latest",
+        "@slidev/theme-seriph": "latest",
+        "vue": "^3.5.27",
+      },
+    },
   },
   "packages": {
     "2026-01-10_fp": ["2026-01-10_fp@workspace:2026-01-10_fp-slides"],
+
+    "2026-02-28_slides-as-code-slides": ["2026-02-28_slides-as-code-slides@workspace:2026-02-28_slides-as-code-slides"],
 
     "@antfu/install-pkg": ["@antfu/install-pkg@1.1.0", "", { "dependencies": { "package-manager-detector": "^1.3.0", "tinyexec": "^1.0.1" } }, "sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ=="],
 
