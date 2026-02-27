@@ -1,0 +1,19 @@
+ul,
+ol,
+pre,
+table {
+  text-align: left;
+}
+
+html,
+body,
+#app,
+#page-root {
+  font-family:
+    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-muted {
+  opacity: 0.5;
+}
