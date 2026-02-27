@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/debian
 {
-  "name": "RD Slides",
+  "name": "RD Meetups",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "build": {
     "dockerfile": "Dockerfile"
@@ -16,11 +16,12 @@
         "antfu.slidev",
         "GitHub.codespaces",
         "haskell.haskell",
-        "1YiB.rust-bundle",
         "fill-labs.dependi",
         "Vue.volar",
         "bradlc.vscode-tailwindcss",
-        "Anthropic.claude-code"
+        "Anthropic.claude-code",
+        "dustypomerleau.rust-syntax",
+        "rust-lang.rust-analyzer"
       ],
       "settings": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
