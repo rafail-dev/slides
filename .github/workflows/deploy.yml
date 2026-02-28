@@ -12,12 +12,15 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  SLIDES_DIR: 2026-02-28_slides-as-code-slides
+
 jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: 2026-02-28_slides-as-code-slides
+        working-directory: ${{ env.SLIDES_DIR }}
     steps:
       - uses: actions/checkout@v4
 
@@ -31,7 +34,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: 2026-02-28_slides-as-code-slides/dist
+          path: ${{ env.SLIDES_DIR }}/dist
 
   deploy:
     needs: build
