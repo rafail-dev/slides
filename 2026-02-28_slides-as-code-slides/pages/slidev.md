@@ -175,3 +175,7 @@ src: ./math.md
 ---
 src: ./diagrams.md
 ---
+
+---
+src: ./ai.md
+---

@@ -73,12 +73,22 @@ src: ./pages/asciinema.md
 
 ---
 
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
-
----
-
 # Learn More
 
 [Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+
+---
+
+# See You Soon! 👋
+
+Feel free to ask any questions, share your feedback, and criticize freely!
+
+[rafail.dev@gmail.com](mailto:rafail.dev@gmail.com)
+
+<div class="flex flex-row w-full items-center gap-10 items-center justify-center">
+  <img class="w-25%" src="/rafail_dev.png"/>
+</div>
+
+💬 Subscribe for updates: [t.me/rafail_dev](https://t.me/rafail_dev)
 
 <PoweredBySlidev mt-10 />
