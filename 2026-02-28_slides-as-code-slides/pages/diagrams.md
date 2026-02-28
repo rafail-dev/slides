@@ -31,6 +31,8 @@ gitGraph
 
 </div>
 
-[Mermaid](https://mermaid.js.org) · [D2](https://d2lang.com) · [C4](https://c4model.com) · [diagrams.py](https://diagrams.mingrammer.com)
+[Mermaid](https://sli.dev/features/mermaid) [PlantUML](https://sli.dev/features/plantuml)
+
+[D2](https://d2lang.com) · [C4](https://c4model.com) · [Diagrams](https://diagrams.mingrammer.com)
 
 </div>

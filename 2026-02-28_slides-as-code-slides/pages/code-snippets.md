@@ -63,7 +63,7 @@ main = print $ sumList [1..10]  -- 55
 ````
 
 ---
-layout: left
+layout: default
 class: text-left
 ---
 
@@ -82,7 +82,7 @@ const c = f(["a", "b", "c"]);
 ```
 
 ---
-layout: ldefaultt
+layout: default
 class: text-left
 ---
 

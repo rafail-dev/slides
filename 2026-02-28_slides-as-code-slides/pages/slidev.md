@@ -171,3 +171,7 @@ src: ./code-snippets.md
 ---
 src: ./math.md
 ---
+
+---
+src: ./diagrams.md
+---
