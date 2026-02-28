@@ -66,7 +66,7 @@ Feel free to ask any questions, share your feedback, and criticize freely!
 
 [rafail.dev@gmail.com](mailto:rafail.dev@gmail.com)
 
-<div class="flex flex-row w-full items-center gap-10 items-center justify-center">
+<div class="flex flex-row w-full items-center gap-10 justify-center">
   <img class="w-25%" src="/rafail_dev.png"/>
 </div>
 
