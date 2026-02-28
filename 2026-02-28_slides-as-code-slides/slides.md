@@ -54,12 +54,6 @@ src: ./pages/asciinema.md
 
 ---
 
-# Learn More
-
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
-
----
-
 # See You Soon! 👋
 
 Feel free to ask any questions, share your feedback, and criticize freely!
