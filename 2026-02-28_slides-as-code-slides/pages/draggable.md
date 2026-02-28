@@ -1,5 +1,3 @@
----
-
 # Draggable Elements
 
 👆 Try double-clicking the logo below!
