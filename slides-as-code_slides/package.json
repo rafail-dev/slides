@@ -1,0 +1,17 @@
+{
+  "name": "2026-02-28_slides-as-code-slides",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --remote",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.13.0",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "slidev-theme-dracula": "latest",
+    "vue": "^3.5.27"
+  }
+}
