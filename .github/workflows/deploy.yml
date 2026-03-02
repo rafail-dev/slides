@@ -20,10 +20,34 @@ jobs:
 
       - uses: oven-sh/setup-bun@v2
 
-      - name: Build all presentations
+      - name: Restore cached builds
+        uses: actions/cache@v4
+        with:
+          path: _site
+          key: slides-site-${{ github.sha }}
+          restore-keys: slides-site-
+
+      - name: Detect changed presentations
+        id: changes
         run: |
+          if [ -f _site/.deployed-sha ]; then
+            prev=$(cat _site/.deployed-sha)
+            changed=$(git diff --name-only "$prev" HEAD -- '*_slides/' \
+              | cut -d/ -f1 | sort -u | sed 's/_slides$//' | tr '\n' ' ')
+            echo "changed=${changed:-__all__}" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=__all__" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build presentations
+        run: |
+          changed="${{ steps.changes.outputs.changed }}"
           for dir in *_slides/; do
             name="${dir%_slides/}"
+            if [ "$changed" != "__all__" ] && ! echo "$changed" | grep -qw "$name"; then
+              echo "Skipping $name (unchanged)"
+              continue
+            fi
             echo "Building $dir → $name"
             cd "$dir"
             bun install
@@ -32,6 +56,7 @@ jobs:
             mkdir -p _site/$name
             cp -r "$dir/dist/"* _site/$name/
           done
+          echo "${{ github.sha }}" > _site/.deployed-sha
 
       - uses: actions/upload-pages-artifact@v3
         with:
