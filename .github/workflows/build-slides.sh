@@ -24,4 +24,6 @@ for dir in *_slides/; do
   cd ..
   mkdir -p _site/"$name"
   cp -r "$dir/dist/"* _site/"$name"/
+  # Save content hash for future change detection
+  find "$dir" -type f -not -path '*/node_modules/*' -not -path '*/dist/*' | sort | xargs sha256sum | sha256sum | cut -d' ' -f1 > _site/"$name"/.content-hash
 done

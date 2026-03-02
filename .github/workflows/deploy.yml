@@ -31,7 +31,6 @@ jobs:
         run: |
           changed=$(bash .github/workflows/detect-changes.sh)
           bash .github/workflows/build-slides.sh "$changed" "${{ github.event.repository.name }}"
-          echo "${{ github.sha }}" > _site/.deployed-sha
 
       - uses: actions/upload-pages-artifact@v3
         with:
