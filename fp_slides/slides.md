@@ -16,6 +16,7 @@ defaults:
 layout: image
 image: /zeon-intro.jpg
 backgroundSize: contain
+routerMode: hash
 ---
 
 ---
