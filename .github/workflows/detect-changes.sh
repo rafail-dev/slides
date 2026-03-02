@@ -9,7 +9,12 @@ changed=""
 
 for dir in *_slides/; do
   name="${dir%_slides/}"
-  hash=$(find "$dir" -type f -not -path '*/node_modules/*' -not -path '*/dist/*' | sort | xargs sha256sum | sha256sum | cut -d' ' -f1)
+  hash=$(find "$dir" -type f \
+    -not -path '*/node_modules/*' \
+    -not -path '*/dist/*' \
+    -not -name 'bun.lock*' \
+    -not -name '*.lockb' \
+    | sort | xargs sha256sum | sha256sum | cut -d' ' -f1)
   cached_hash=""
   [ -f "_site/$name/.content-hash" ] && cached_hash=$(cat "_site/$name/.content-hash")
 
