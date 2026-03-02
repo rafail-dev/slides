@@ -20,6 +20,7 @@ backgroundSize: contain
 mdc: true
 # duration of the presentation
 duration: 60min
+routerMode: hash
 ---
 
 ---
