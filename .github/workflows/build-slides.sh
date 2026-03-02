@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Build Slidev presentations.
+# Usage: build-slides.sh <changed> <base_path>
+#   changed  - space-separated names or "__all__"
+#   base_path - repo name for --base (e.g. "slides")
+
+changed="$1"
+base_path="$2"
+
+for dir in *_slides/; do
+  name="${dir%_slides/}"
+
+  if [ "$changed" != "__all__" ] && ! echo "$changed" | grep -qw "$name"; then
+    echo "Skipping $name (unchanged)"
+    continue
+  fi
+
+  echo "Building $dir → $name"
+  cd "$dir"
+  bun install
+  bunx slidev build --base "/$base_path/$name/"
+  cd ..
+  mkdir -p _site/"$name"
+  cp -r "$dir/dist/"* _site/"$name"/
+done
