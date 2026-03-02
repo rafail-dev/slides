@@ -39,8 +39,8 @@ or [create](https://sli.dev/guide/) your own...
 ````md magic-move
 ```bash
 bun create slidev
-# pnpm create slidev
 # npm init slidev@latest
+# pnpm create slidev
 # yarn create slidev
 # deno init --npm slidev
 ```
