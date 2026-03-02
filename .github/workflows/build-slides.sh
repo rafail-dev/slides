@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+source "$(dirname "$0")/lib.sh"
 
 # Build Slidev presentations.
 # Usage: build-slides.sh <changed> <base_path>
@@ -29,11 +30,5 @@ for dir in *_slides/; do
   cd ..
   mkdir -p _site/"$name"
   cp -r "$dir/dist/"* _site/"$name"/
-  # Save content hash for future change detection (must match detect-changes.sh)
-  find "$dir" -type f \
-    -not -path '*/node_modules/*' \
-    -not -path '*/dist/*' \
-    -not -name 'bun.lock*' \
-    -not -name '*.lockb' \
-    | sort | xargs sha256sum | sha256sum | cut -d' ' -f1 > _site/"$name"/.content-hash
+  content_hash "$dir" > _site/"$name"/.content-hash
 done
