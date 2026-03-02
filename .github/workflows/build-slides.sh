@@ -25,7 +25,7 @@ for dir in *_slides/; do
 
   echo "Building $dir → $name"
   cd "$dir"
-  bun install
+  bun install --frozen-lockfile
   bunx slidev build --base "/$base_path/$name/"
   cd ..
   mkdir -p _site/"$name"
