@@ -3,11 +3,16 @@ set -euo pipefail
 
 # Build Slidev presentations.
 # Usage: build-slides.sh <changed> <base_path>
-#   changed  - space-separated names or "__all__"
+#   changed  - space-separated names, "__all__", or "__none__"
 #   base_path - repo name for --base (e.g. "slides")
 
 changed="$1"
 base_path="$2"
+
+if [ "$changed" = "__none__" ]; then
+  echo "No changes detected, skipping all builds"
+  exit 0
+fi
 
 for dir in *_slides/; do
   name="${dir%_slides/}"
